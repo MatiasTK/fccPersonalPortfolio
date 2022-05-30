@@ -1,0 +1,75 @@
+:root{
+    --projects-background: 	#243199;
+    --contact-background: #0a1a2e;
+    --hover-color: #3f5ffb;
+}
+
+a{
+    color: inherit;
+}
+
+#projects {
+    background-color: var(--projects-background);
+}
+
+.fa-arrow-up-right-from-square:hover, .fa-github:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+}
+
+.project-tile {
+    height: 100%;
+}
+
+#contact {
+    background-color: var(--contact-background);
+}
+
+.contact-link{
+    width: 15rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    #nav-flex{
+        justify-content: center !important;
+    }
+
+    #nav-title{
+        padding-bottom: 1rem;
+    }
+
+    #nav-links{
+        gap: 0.5rem !important;
+    }
+
+    #carousel-title{
+        margin-top: 8rem;
+        margin-left: 2rem;
+    }
+    
+    #carousel-body {
+        width: 80% !important;
+        margin-left: 2rem;
+    }
+
+    #projects {
+        height: auto !important;
+    }
+
+    .card {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #contact {
+        height: auto !important;
+    }
+
+    #contact-flex{
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1rem;
+    }
+}

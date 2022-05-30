@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matias Vallejos</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Nav  -->
+    <nav class="p-3 bg-dark text-white fixed-top" id="navbar">
+      <div class="container">
+        <div
+          class="d-flex flex-row align-items-center flex-wrap justify-content-between"
+          id="nav-flex"
+        >
+          <h5 class="m-0" id="nav-title">MatiasTK</h5>
+          <div class="d-flex gap-5" id="nav-links">
+            <a
+              class="btn btn-outline-light font-monospace"
+              id="about-btn"
+              href="#welcome-section"
+              >About</a
+            >
+            <a
+              class="btn btn-outline-light font-monospace"
+              href="#projects"
+              id="projects-btn"
+              >Projects</a
+            >
+            <a
+              class="btn btn-outline-light font-monospace"
+              href="#contact"
+              id="contact-btn"
+              >Contact</a
+            >
+            <div class="dropdown">
+              <button
+                class="text-white font-monospace dropdown-toggle bg-transparent border-0 p-0 pt-2"
+                type="button"
+                id="dropdownLanguage"
+                data-bs-toggle="dropdown"
+                aria-expanded="true"
+              >
+                Language
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="dropdownLanguage"
+              >
+                <li>
+                  <button
+                    class="dropdown-item"
+                    id="english"
+                    onclick="handleLanguageChange('English')"
+                  >
+                    English
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="dropdown-item"
+                    id="spanish"
+                    onclick="handleLanguageChange('Spanish')"
+                  >
+                    Spanish
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div
+      class="bg-danger vh-100 d-flex align-items-center justify-content-evenly text-white w-100 overflow-hidden"
+      id="welcome-section"
+    >
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-touch="false"
+        data-bs-interval="false"
+      >
+        <div class="carousel-inner min-vw-100">
+          <div class="carousel-item active">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <h1 class="display-1" id="about-title">
+                Hi, I am <strong>Mati</strong>
+              </h1>
+              <p id="about-subtitle">A Frontend Web Developer</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <p class="display-3 mb-5 about-me-title" id="carousel-title">
+                About me
+              </p>
+              <p class="w-50 about-me-body" id="carousel-body">
+                Hello! My name is Matias I'm from Argentina. <br />
+                I'm a started frontend web developer and a student at
+                Engineering University of Buenos Aires. <br />
+                I am passionate about technology. My interest in web development
+                started back in 2021 after trying some programming languages. I
+                Like to create new things, solve problems and learn something
+                new every day. My main goal is to become a fullstack developer.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <p
+                class="display-5 mb-5 about-technology-title"
+                id="carousel-title"
+              >
+                Technologies I have worked with
+              </p>
+              <div class="row text-center w-75" id="carousel-body">
+                <div class="col">
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item bg-danger text-white border-bottom border-dark"
+                    >
+                      HTML5
+                    </li>
+                    <li
+                      class="list-group-item bg-danger text-white border-bottom border-dark"
+                    >
+                      CSS3
+                    </li>
+                    <li
+                      class="list-group-item bg-danger text-white border-bottom border-dark"
+                    >
+                      JavaScript (ES6+)
+                    </li>
+                    <li
+                      class="list-group-item bg-danger text-white border-bottom border-dark"
+                    >
+                      React & Redux
+                    </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item bg-danger text-white border-bottom border-dark"
+                    >
+                      Sass, Boostrap, Tailwind
+                    </li>
+                    <li
+                      class="list-group-item bg-danger text-white border-bottom border-dark"
+                    >
+                      C
+                    </li>
+                    <li
+                      class="list-group-item bg-danger text-white border-bottom border-dark"
+                    >
+                      Python
+                    </li>
+                    <li
+                      class="list-group-item bg-danger text-white border-bottom border-dark"
+                    >
+                      SQLite, MySQL, Firebase
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div
+      class="h-100 py-5 d-flex flex-column justify-content-center align-items-center"
+      id="projects"
+    >
+      <h1 class="text-white text-center py-3" id="projects-title">
+        Some of my projects
+      </h1>
+      <div class="container">
+        <div class="row justify-content-center mb-2 gap-2">
+          <div class="col-sm-3 p-0">
+            <div class="card shadow-sm project-tile">
+              <div class="card-header">
+                <div
+                  class="d-flex align-items-center justify-content-between mt-2 mb-4"
+                >
+                  <i class="fa-solid fa-folder fa-xl text-primary"></i>
+                  <div>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://github.com/MatiasTK/WordleES"
+                    >
+                      <i class="fa-brands fa-github fa-xl"></i>
+                    </a>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://matiastk.github.io/WordleES/"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-up-right-from-square fa-xl"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h5 id="wordle-title">Wordle</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <p id="wordle-body">
+                    A spanish clone of popular game Wordle Created by Josh
+                    Wardle.
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer text-muted d-flex justify-content-around">
+                <p class="m-0">React</p>
+                <p class="m-0">CSS3</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 p-0">
+            <div class="card shadow-sm project-tile">
+              <div class="card-header">
+                <div
+                  class="d-flex align-items-center justify-content-between mt-2 mb-4"
+                >
+                  <i class="fa-solid fa-folder fa-xl text-primary"></i>
+                  <div>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://github.com/MatiasTK/pomodoroTimer"
+                    >
+                      <i
+                        class="fa-brands fa-github fa-xl text-decoration-none"
+                      ></i>
+                    </a>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://matiastk.github.io/pomodoroTimer/"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-up-right-from-square fa-xl"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h5 id="pomodoro-timer-title">Pomodoro Timer</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <p id="pomodoro-timer-body">
+                    A web configurable timer based on the pomodoro technique to
+                    maxime the productivity.
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer text-muted d-flex justify-content-around">
+                <p class="m-0">React</p>
+                <p class="m-0">Tailwind</p>
+                <p class="m-0">DaisyUI</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 p-0">
+            <div class="card shadow-sm project-tile">
+              <div class="card-header">
+                <div
+                  class="d-flex align-items-center justify-content-between mt-2 mb-4"
+                >
+                  <i class="fa-solid fa-folder fa-xl text-primary"></i>
+                  <div>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://github.com/MatiasTK/TaskApp"
+                    >
+                      <i
+                        class="fa-brands fa-github fa-xl text-decoration-none"
+                      ></i>
+                    </a>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://matiastk-taskapp.netlify.app/"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-up-right-from-square fa-xl"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h5 id="task-notes-title">Task Notes App</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <p id="task-notes-body">
+                    Simple task notes app with Google login and React Routing.
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer text-muted d-flex justify-content-around">
+                <p class="m-0">React</p>
+                <p class="m-0">AntD</p>
+                <p class="m-0">Firebase</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-2 gap-2">
+          <div class="col-sm-3 p-0">
+            <div class="card shadow-sm project-tile">
+              <div class="card-header">
+                <div
+                  class="d-flex align-items-center justify-content-between mt-2 mb-4"
+                >
+                  <i class="fa-solid fa-folder fa-xl text-primary"></i>
+                  <div>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://github.com/MatiasTK/javascriptCalculator"
+                    >
+                      <i
+                        class="fa-brands fa-github fa-xl text-decoration-none"
+                      ></i>
+                    </a>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://matiastk.github.io/javascriptCalculator/"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-up-right-from-square fa-xl"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h5 id="calculator-title">Javascript Calculator</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <p id="calculator-body">
+                    An online calculator with a simple and intuitive interface.
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer text-muted d-flex justify-content-around">
+                <p class="m-0">React</p>
+                <p class="m-0">React Redux</p>
+                <p class="m-0">Tailwind</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 p-0">
+            <div class="card shadow-sm project-tile">
+              <div class="card-header">
+                <div
+                  class="d-flex align-items-center justify-content-between mt-2 mb-4"
+                >
+                  <i class="fa-solid fa-folder fa-xl text-primary"></i>
+                  <div>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://github.com/MatiasTK/markdownPreviewer"
+                    >
+                      <i
+                        class="fa-brands fa-github fa-xl text-decoration-none"
+                      ></i>
+                    </a>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://matiastk.github.io/markdownPreviewer/"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-up-right-from-square fa-xl"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h5 id="markdown-title">Markdown Previewer</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <p id="markdown-body">
+                    Online markdown editor with live preview.
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer text-muted d-flex justify-content-around">
+                <p class="m-0">React</p>
+                <p class="m-0">React Redux</p>
+                <p class="m-0">Tailwind</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 p-0">
+            <div class="card shadow-sm project-tile">
+              <div class="card-header">
+                <div
+                  class="d-flex align-items-center justify-content-between mt-2 mb-4"
+                >
+                  <i class="fa-solid fa-folder fa-xl text-primary"></i>
+                  <div>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://github.com/MatiasTK/Phasmophobia-Calculator"
+                    >
+                      <i
+                        class="fa-brands fa-github fa-xl text-decoration-none"
+                      ></i>
+                    </a>
+                    <a
+                      class="text-decoration-none"
+                      target="_blank"
+                      href="https://matiastk.github.io/Phasmophobia-Calculator/"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-up-right-from-square fa-xl"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h5 id="phasmophobia-title">Phasmophobia Calculator</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <p id="phasmophobia-body">
+                    A spanish web helper for the popular game Phasmophobia.
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer text-muted d-flex justify-content-around">
+                <p class="m-0">HTML</p>
+                <p class="m-0">CSS3</p>
+                <p class="m-0">Javascript</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div
+      class="text-white d-flex justify-content-center flex-column text-center"
+      id="contact"
+    >
+      <h1 class="pt-5" id="contact-title">Contact Me</h1>
+      <div class="d-flex justify-content-center py-5" id="contact-flex">
+        <a
+          href="mailto:matiavallejo@gmail.com"
+          rel="noopener no-referrer"
+          target="_blank"
+          class="d-flex text-decoration-none align-items-center justify-content-center contact-link"
+        >
+          <i class="fa-solid fa-envelope fa-xl"></i>
+          <p class="m-0 ms-3 fw-bold" id="contact-email">Send a mail</p>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/matiasvallejosdev/"
+          class="d-flex text-decoration-none align-items-center justify-content-center contact-link"
+          target="_blank"
+          id="profile-link"
+        >
+          <i class="fa-brands fa-linkedin fa-xl"></i>
+          <p class="m-0 ms-3 fw-bold">Linkedin</p>
+        </a>
+        <a
+          href="https://www.freecodecamp.org/MatiasTK"
+          class="d-flex text-decoration-none align-items-center justify-content-center contact-link"
+          target="_blank"
+          id="profile-link"
+        >
+        <i class="fa-brands fa-free-code-camp"></i>
+          <p class="m-0 ms-3 fw-bold">FreeCodeCamp</p>
+        </a>
+        <a
+          href="https://github.com/MatiasTK"
+          class="d-flex text-decoration-none align-items-center justify-content-center contact-link"
+          target="_blank"
+          id="profile-link"
+        >
+          <i class="fa-brands fa-github fa-xl"></i>
+          <p class="m-0 ms-3 fw-bold">Github</p>
+        </a>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
