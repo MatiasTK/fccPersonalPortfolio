@@ -1,5 +1,5 @@
 # tributePage
-This project was made for completing freeCodeCamp Responsive Design Certification. It was made using only HTML and SASS.
+This project was made for completing freeCodeCamp Responsive Design Certification. It was made using only HTML, Boostrap and Javascript.
 
 [Link to web](https://matiastk.github.io/fccPersonalPortfolio/).
 
